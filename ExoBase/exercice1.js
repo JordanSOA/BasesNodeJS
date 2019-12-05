@@ -92,7 +92,7 @@
 
 const process = require('process');
 
-function runItXTimes(times){
+let runItXTimes = function (times){
   for (let i = 0; i < times; i++) {
     console.log(`Bonjour ${i+1} fois !`);
   };
@@ -100,6 +100,7 @@ function runItXTimes(times){
 
 runItXTimes(process.argv[2]);
 
+module.exports = runItXTimes;
 /**
  * Sami Radi - VirtuoWorks® - tous droits réservés©
 **/

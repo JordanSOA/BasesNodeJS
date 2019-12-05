@@ -51,6 +51,9 @@
     affichés à la suite.
 **/
 
+console.log("Je suis le module principal !");
+const scdModule = module.require('./exercice2-module.js');
+
 /**
     2. Dans votre module secondaire, faîtes en sorte d'afficher :
       - Le nom du dossier dans lequel le module s'exécute (voir Global)
@@ -88,7 +91,7 @@
     --> Dans votre module principal (celui-ci), utilisez la fonction (qui sera
     donc une méthode de l'objet retourné par la méthode module.require())
 **/
-
+const firstMethodModule = module.require('./exercice1.js');
 /**
     4. Dans votre module secondaire :
       - Déclarez un Array contenant 3 messages. Affichez la concaténation des 3
@@ -97,6 +100,14 @@
       cette propriété pour l'afficher dans la console. Utilisez cet objet dans
       votre module principal en exécutant sa méthode.
 **/
+
+// const scdModule = module.require('./exercice2-module.js');
+let concatSen = scdModule.a[0] +" "+ scdModule.a[1] +"  "+ scdModule.a[2];
+console.log(concatSen);
+
+
+scdModule.b.afficherProp();
+
 
 /**
  * Sami Radi - VirtuoWorks® - tous droits réservés©
