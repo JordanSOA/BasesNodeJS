@@ -55,6 +55,12 @@
   1. Écrivez un programme qui créé un fichier texte (de façon asynchrone) encodé
   en utf8 contenant le message "Ceci est un message écrit par Node JS".
 **/
+//const fs = require("fs");
+//let fileP = "exo3Html.html";
+// fs.appendFile("exo3Html.html", "<h3>Ceci est un message écrit par Node JS </h3>", function (err) {
+//   if (err) throw err;
+//   console.log('Saved!');
+// })
 
 /**
   2. Écrivez un programme qui vérifie si un fichier texte existe et qui affiche
@@ -68,12 +74,34 @@
   doivent souvent prévoir d'accepter des arguments qui seront fournis par les
   méthodes asynchrones qui les exécutent.
 **/
+// fs.access(fileP, fs.constants.F_OK, (err) => {
+//   console.log(`${fileP} ${err ? 'does not exist' : 'exists'}`);
+
+//   fs.readFile('C:/Users/Workspace/Desktop/CoursSimplon/BasesNodeJs/ExoBase/exo3Html.html', (err, data) => {
+//     if (err) throw err;
+//     console.log(data.toString('utf-8'));
+//   });
+// });
+
 
 /**
   3. Écrivez un programme qui affiche dans la console le contenu d'un fichier,
   si il existe, dont le nom/chemin est passé en argument lors de l'exécution
   du programme.
 **/
+
+// let afficherTexteSiFichierExist = (fileP) => {
+//   fs.access(fileP, fs.constants.F_OK, (err) => {
+//     console.log(`${fileP} ${err ? 'does not exist' : 'exits' }`);
+  
+//     fs.readFile('exo3Html.html', (err, data) => {
+//       if (err) throw err;
+//       console.log(data.toString('utf-8'));
+//     });
+//   });
+// }; 
+
+// afficherTexteSiFichierExist("exo3Html.html");
 
 /**
   4. Modifiez votre programme précédent pour créer une fonction qui prend en
@@ -84,6 +112,9 @@
   ATTENTION: Vous devez charger le module FileSystem dans votre module
   secondaire.
 **/
+
+const scdModule = module.require("./exo3Module.js");
+scdModule.funcRead("exo3Html.html");
 
 /**
  * Sami Radi - VirtuoWorks® - tous droits réservés©
