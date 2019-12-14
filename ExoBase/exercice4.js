@@ -87,13 +87,16 @@
     votre ordinateur. Vérifiez qu'elle correspond bien à la liste obtenues à
     l'aide de la commande système proposée plus haut.
 **/
-
+const dns = require('dns');
+console.log(dns.getServers());
 /**
     2. Utilisez la méthode .lookup() du module DNS de Node JS pour afficher dans
     votre console l'adresse IPv4 correspondant au nom de domaine www.fnac.com et
     vérifiez qu'elle correspond bien à celle que je vous donne plus haut.
 **/
-
+var lookUp = dns.lookup("www.fnac.com", function(err, adresses, family){
+  console.log(adresses);
+});
 /**
     3.
     - Demandez à votre voisin son adresse IPv4.
