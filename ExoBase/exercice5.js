@@ -22,6 +22,13 @@
     2. Chargez le module chalk dans votre module principal et affichez dans la
     console en VERT un message pour indiquer que chalk est installé.
 **/
+const chalk = require('chalk');
+
+console.log(chalk.green('installed'));
+console.log(chalk.red('Une erreur est survenue !'));
+console.log(chalk.grey('Ceci est un message de debug'));
+console.log(chalk.bold('Ceci est un message important !'));
+
 
 /**
     3.

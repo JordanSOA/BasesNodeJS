@@ -94,9 +94,9 @@ console.log(dns.getServers());
     votre console l'adresse IPv4 correspondant au nom de domaine www.fnac.com et
     vérifiez qu'elle correspond bien à celle que je vous donne plus haut.
 **/
-var lookUp = dns.lookup("www.fnac.com", function(err, adresses, family){
-  console.log(adresses);
-});
+// var lookUp = dns.lookup("www.fnac.com", function(err, adresses, family){
+//   console.log(adresses);
+// });
 /**
     3.
     - Demandez à votre voisin son adresse IPv4.
@@ -107,7 +107,9 @@ var lookUp = dns.lookup("www.fnac.com", function(err, adresses, family){
     ATTENTION : pour modifier le fichier hosts vous devez démarrer un éditeur
     de texte en tant que administrateur du système d'exploitation.
 **/
-
+// var lookUp = dns.lookup("sissako", function(err, adresses, family){
+//   console.log(adresses);
+// });
 /**
     4. Votre programme prend un nom en argument lors de son exécution. Votre
     programme affiche dans la console que ce nom correspond à une adresse IPv4
@@ -117,7 +119,8 @@ var lookUp = dns.lookup("www.fnac.com", function(err, adresses, family){
     - Vous devez modulariser ce programme (votre fonction doit être dans un
       module secondaire).
 **/
-
+const scdModule = module.require('./exercice4-module.js');
+scdModule.checkFunc.checkWithIP("sissao");
 /**
  * Sami Radi - VirtuoWorks® - tous droits réservés©
 **/
